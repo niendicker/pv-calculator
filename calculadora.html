@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Calculadora solar</title>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+
+  <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-dOEk3AxozMiQ2gTlXUOQ9C2Zvn22va8" >
+  </script>
+  <!-- Get geolocation from address or ZIP code -->
+  <script type="text/javascript" src="googleMaps.js"> </script>
+
+  <!-- Download and parse irradiance data from NASA -->
+  <script type="text/javascript" src="nasaDataSource.js"> </script>
+  
+  <noscript>Sorry, your browser does not support JavaScript!</noscript>
+</head>
+
+<body>
+  <div id="address">
+    <label for="cidade">Cidade:</label>
+    <input type="text" id="cidade" class="inputText" name="cidade"><br>
+    <label for="cep">CEP:</label>
+    <input type="text" id="cep" class="inputText" name="cep"><br>
+  </div>
+  <div id="energy">
+    <label for="consumo">Consumo KWh/mês:</label>
+    <input type="text" id="consumo" class="inputText" name="consumo"><br>
+    <label for="custo">Custo R$/KWh:</label>
+    <input type="text" id="custo" class="inputText" name="custo"><br>
+  </div>
+  <button type="button" id="calculate" onclick="calculate()"> Calcular </button>
+  <div id="results"></div>
+</body>
+
+</html>
